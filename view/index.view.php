@@ -13,7 +13,32 @@
 
     <body>
         <h1>Главная страница</h1>
+            //Форма добавления мероприятия
+                <form style="background-color:gainsboro" action="../controllers/add_event.php" method="post">
+            <label for="">Название</label>
+            <input type="text" name="title">
+            <br><br>
+            <label for="">Изображение</label>
+            <input type="text" name="image">
+            <br><br>
+            <label for="">Описание</label>
+            <input type="text" name="description">
+            <br><br>
+            <label for="">Дата мероприятия</label>
+            <input type="date" name="date">
+            <br><br>
+            <label for="">Цена взрослого билета</label>
+            <input type="int" name="ticket_adult_price">
+            <br><br>
+            <label for="">Цена детского билета</label>
+            <input type="int" name="ticket_kid_price">
 
+            <input type="hidden" name="event_id" value="4">
+            <br><br>
+            <button style="background-color:slategray; background-rounded: 1px solid" type="submit">Добавить
+                событие</button>
+        </form>
+        
         <?php 
     $pdo = new PDO("mysql:host=localhost;dbname=myapp;port=3306;", 'root','');
 
